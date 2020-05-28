@@ -90,8 +90,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'Shougo/echodoc.vim'
     " Interactive code
     Plug 'ChristianChiarulli/codi.vim'
+
+    """ Custom """
     " Vim Wiki
-    " Plug 'https://github.com/vimwiki/vimwiki.git'
+    Plug 'https://github.com/vimwiki/vimwiki.git'
+    " nord theme
+    Plug 'arcticicestudio/nord'
+    Plug 'arcticicestudio/nord-vim'
+    " Taskwiki / taskwarrior
+    Plug 'tbabej/taskwiki'
+    Plug 'majutsushi/tagbar'
+    Plug 'blindFS/vim-taskwarrior'
   endif
 
 

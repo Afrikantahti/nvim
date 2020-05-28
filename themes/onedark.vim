@@ -16,6 +16,7 @@ let g:onedark_termcolors=256
 
 syntax on
 colorscheme onedark
+colorscheme nord
 
 
 " checks if your terminal has 24-bit color support
