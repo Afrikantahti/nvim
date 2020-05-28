@@ -14,10 +14,42 @@
     \ }
 
 " Filetypes enabled for
+let g:vimwiki_global_ext = 0
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 let g:vimwiki_filetypes = ['markdown']
+let g:vimwiki_root = '~/Nextcloud/vimwiki'
+let g:vimwiki_list = [
+    \{
+        \'path': '~/Nextcloud/vimwiki',
+        \ 'syntax': 'markdown', 'ext': '.md',
+        \ 'auto_tags': 1,
+        \ 'auto_diary_index': 1,
+        \ 'auto_generate_links': 1,
+        \ 'auto_generate_tags': 1
+    \},
+    \{
+        \'path': '~/Nextcloud/vimwiki/work',
+        \ 'syntax': 'markdown', 'ext': '.md',
+        \ 'auto_tags': 1,
+        \ 'auto_diary_index': 1,
+        \ 'auto_generate_links': 1,
+        \ 'auto_generate_tags': 1
+    \}]
 
-let g:vimwiki_list = [{'path': '~/.config/nvim/wiki',
-                      \ 'syntax': 'markdown', 'ext': '.md', 'exclude_files': ['**/README.md', '**/Readme.md'] }]
+"let g:vimwiki_list = [ {'path': '~/private/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+" ~~~~~ Diary Template
+autocmd FileType markdown inoremap <leader>diary #<Space><++><CR><CR><++><CR><CR>##<Space>DevLog<CR><CR><++><CR><CR><Esc>gg
+" ~~~~~ This is for a vim wiki note template
+autocmd Filetype markdown inoremap <leader>note #<Space>Explain<CR><CR><CR><CR>#<Space>Documentation<CR><CR><++><CR><CR>#<Space>Code<CR><CR>```<++><CR><CR>#<Space> Documentation<CR><++><CR><CR>```<CR><CR><Esc>gg2ji
+autocmd Filetype markdown inoremap <leader>shnote #<Space>Explain<CR><CR><CR><CR>```sh<CR><CR><++><CR><CR>```<CR><CR>#<Space>Documentation<CR><CR><++><CR><CR><Esc>gg2ji
+autocmd Filetype markdown inoremap <leader>sh ```sh<CR><CR><CR><CR>```<Esc>2ki
+" ~~~~~ This inputs a NOW() timestamp
+autocmd Filetype markdown inoremap <leader>now <C-r>=strftime('%F')<CR>
+autocmd Filetype markdown inoremap <leader>day #<space><C-r>=strftime('%F')<CR><CR>#<space>Morning Journal<CR><CR>#<space>Thoughts<CR><CR>#<space>Workspace<CR><CR>#<space>Resonance calendar<CR><CR>#<space>Evening Reflection 
+au BufEnter diary.md :VimwikiDiaryGenerateLinks
+au BufEnter diary.wiki :VimwikiDiaryGenerateLink
+map <leader>mt :VimwikiMakeDiaryNote<CR>
+map <leader>mn :VimwikiMakeTomorrowDiaryNote<CR>
 
 " let g:vimwiki_auto_header = 0
 " let g:vimwiki_markdown_header_style = 1
