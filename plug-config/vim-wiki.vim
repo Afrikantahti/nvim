@@ -35,6 +35,14 @@ let g:vimwiki_list = [
         \ 'auto_generate_links': 1,
         \ 'auto_generate_tags': 1
     \}]
+nmap <A-CR> <Plug>VimwikiFollowLink
+nnoremap łwf <Plug>VimwikiFollowLink
+nnoremap łws <Plug>VimwikiSplitLink
+nnoremap łwv <Plug>VimwikiVSplitLink
+nnoremap łwv <Plug>VimwikiTabnewLink
+vnoremap łwn <Plug>VimwikiNormalizeLinkVisualCR
+inoremap łwn VimwikiReturn
+let g:vimwiki_table_mappings = 0
 
 "let g:vimwiki_list = [ {'path': '~/private/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 " ~~~~~ Diary Template
@@ -47,6 +55,7 @@ autocmd Filetype markdown inoremap <leader>sh ```sh<CR><CR><CR><CR>```<Esc>2ki
 autocmd Filetype markdown inoremap <leader>now <C-r>=strftime('%F')<CR>
 autocmd Filetype markdown inoremap <leader>day #<space><C-r>=strftime('%F')<CR><CR>#<space>Morning Journal<CR><CR>#<space>Thoughts<CR><CR>#<space>Workspace<CR><CR>#<space>Resonance calendar<CR><CR>#<space>Evening Reflection 
 au BufEnter diary.md :VimwikiDiaryGenerateLinks
+au BufEnter index.md :VimwikiGenerateLinks
 au BufEnter diary.wiki :VimwikiDiaryGenerateLink
 map <leader>mt :VimwikiMakeDiaryNote<CR>
 map <leader>mn :VimwikiMakeTomorrowDiaryNote<CR>

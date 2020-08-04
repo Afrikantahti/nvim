@@ -47,7 +47,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Closetags
     Plug 'alvan/vim-closetag'
     " Themes
-    Plug 'christianchiarulli/onedark.vim'
+    " Plug 'christianchiarulli/onedark.vim'
     " Plug 'kaicataldo/material.vim'
     " Plug 'NLKNguyen/papercolor-theme'
     " Plug 'tomasiser/vim-code-dark'
@@ -101,6 +101,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tbabej/taskwiki'
     Plug 'majutsushi/tagbar'
     Plug 'blindFS/vim-taskwarrior'
+    Plug 'dhruvasagar/vim-table-mode'
+    Plug 'dkarter/bullets.vim'
   endif
 
 

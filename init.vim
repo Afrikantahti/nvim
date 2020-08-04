@@ -48,6 +48,7 @@ if !empty(glob("./paths.vim"))
   source $HOME/.config/nvim/paths.vim
 endif
 let g:polyglot_disabled = ['csv']
+au BufNewFile,BufReadPost,FilterReadPost,FileReadPost  * set nospell
 
 " Python
 " https://realpython.com/python-debugging-pdb/ " breakpoint syntax is really cool

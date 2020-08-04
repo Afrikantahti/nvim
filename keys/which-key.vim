@@ -26,7 +26,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 " Single mappings
 let g:which_key_map['/'] = [ ':Commentary'  , 'comment' ]
-let g:which_key_map['.'] = [ ':e $MYVIMRC'                , 'open init' ]
+let g:which_key_map['.'] = [ ':enew'                     , 'enew' ]
 let g:which_key_map[';'] = [ ':Commands'                  , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
 let g:which_key_map[','] = [ 'Startify'                   , 'start screen' ]
@@ -42,6 +42,7 @@ let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['W'] = [ 'w'                          , 'write' ]
 let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
+let g:which_key_map['t'] = [ ':TableModeToggle'                       , 'zen' ]
 
 " Group mappings
 
@@ -69,6 +70,7 @@ let g:which_key_map.b = {
       \ 'n' : ['bnext'     , 'next-buffer']     ,
       \ 'p' : ['bprevious' , 'previous-buffer'] ,
       \ '?' : ['Buffers'   , 'fzf-buffer']      ,
+      \ '.' : [':close'    , 'close windows']      ,
       \ }
 
 " s is for search
@@ -165,6 +167,7 @@ let g:which_key_map.l = {
       \ 'v' : [':Vista!!'                            , 'tag viewer'],
       \ 'z' : [':CocDisable'                         , 'disable CoC'],
       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
+      \ 'M' : [':CocList marketplace'                , 'CoC Marketplace'],
       \ }
 
 " t is for terminal
@@ -186,22 +189,9 @@ let g:which_key_map.t = {
 " w is for wiki
 let g:which_key_map.w = {
       \ 'name' : '+wiki' ,
-      \ 'w' : ['<Plug>VimwikiIndex'                              , 'ncdu'],
-      \ 'n' : ['<plug>(wiki-open)'                              , 'ncdu'],
-      \ 'j' : ['<plug>(wiki-journal)'                              , 'ncdu'],
-      \ 'R' : ['<plug>(wiki-reload)'                              , 'ncdu'],
-      \ 'c' : ['<plug>(wiki-code-run)'                              , 'ncdu'],
-      \ 'b' : ['<plug>(wiki-graph-find-backlinks)'                              , 'ncdu'],
-      \ 'g' : ['<plug>(wiki-graph-in)'                              , 'ncdu'],
-      \ 'G' : ['<plug>(wiki-graph-out)'                              , 'ncdu'],
-      \ 'l' : ['<plug>(wiki-link-toggle)'                              , 'ncdu'],
-      \ 'd' : ['<plug>(wiki-page-delete)'                              , 'ncdu'],
-      \ 'r' : ['<plug>(wiki-page-rename)'                              , 'ncdu'],
-      \ 't' : ['<plug>(wiki-page-toc)'                              , 'ncdu'],
-      \ 'T' : ['<plug>(wiki-page-toc-local)'                              , 'ncdu'],
-      \ 'e' : ['<plug>(wiki-export)'                              , 'ncdu'],
-      \ 'u' : ['<plug>(wiki-list-uniq)'                              , 'ncdu'],
-      \ 'U' : ['<plug>(wiki-list-uniq-local)'                              , 'ncdu'],
+      \ 'd' : [':VimwikiMakeDiaryNote'                          , 'Today diary'],
+      \ 't' : [':VimwikiMakeTomorrowDiaryNote'                  , 'Tomorrow diary'],
+      \ 'b' : [':Vimwiki2HTMLBrowse'                            , 'Browser'],
       \ }
 
 " Global
