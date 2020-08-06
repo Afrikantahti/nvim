@@ -108,7 +108,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 "    Plug 'vim-pandoc/vim-pandoc'
 "    Plug 'vim-pandoc/vim-pandoc-syntax'
 "    Plug 'MikeCoder/markdown-preview'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+    Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
   endif
 
 
