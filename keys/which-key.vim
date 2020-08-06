@@ -30,7 +30,7 @@ let g:which_key_map['.'] = [ ':enew'                     , 'enew' ]
 let g:which_key_map[';'] = [ ':Commands'                  , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
 let g:which_key_map[','] = [ 'Startify'                   , 'start screen' ]
-let g:which_key_map['c'] = [ ':Codi!!'                    , 'virtual repl']
+let g:which_key_map['c'] = [ ':set wrap'                    , 'Wrap']
 let g:which_key_map['d'] = [ ':bd'                        , 'delete buffer']
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
@@ -191,7 +191,8 @@ let g:which_key_map.w = {
       \ 'name' : '+wiki' ,
       \ 'd' : [':VimwikiMakeDiaryNote'                          , 'Today diary'],
       \ 't' : [':VimwikiMakeTomorrowDiaryNote'                  , 'Tomorrow diary'],
-      \ 'b' : [':Vimwiki2HTMLBrowse'                            , 'Browser'],
+      \ 'b' : [':MarkdownPreview'                            , 'Preview'],
+      \ 's' : [':Toc'                                           , 'Toc'],
       \ }
 
 " Global

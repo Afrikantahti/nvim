@@ -35,16 +35,12 @@ let g:vimwiki_list = [
         \ 'auto_generate_links': 1,
         \ 'auto_generate_tags': 1
     \}]
-nmap <A-CR> <Plug>VimwikiFollowLink
-nnoremap łwf <Plug>VimwikiFollowLink
-nnoremap łws <Plug>VimwikiSplitLink
-nnoremap łwv <Plug>VimwikiVSplitLink
-nnoremap łwv <Plug>VimwikiTabnewLink
-vnoremap łwn <Plug>VimwikiNormalizeLinkVisualCR
-inoremap łwn VimwikiReturn
+
+" fix tab autocomplete
 let g:vimwiki_table_mappings = 0
 
-"let g:vimwiki_list = [ {'path': '~/private/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+autocmd FileType markdown setlocal textwidth=80 formatoptions+=t
+
 " ~~~~~ Diary Template
 autocmd FileType markdown inoremap <leader>diary #<Space><++><CR><CR><++><CR><CR>##<Space>DevLog<CR><CR><++><CR><CR><Esc>gg
 " ~~~~~ This is for a vim wiki note template
@@ -55,44 +51,10 @@ autocmd Filetype markdown inoremap <leader>sh ```sh<CR><CR><CR><CR>```<Esc>2ki
 autocmd Filetype markdown inoremap <leader>now <C-r>=strftime('%F')<CR>
 autocmd Filetype markdown inoremap <leader>day #<space><C-r>=strftime('%F')<CR><CR>#<space>Morning Journal<CR><CR>#<space>Thoughts<CR><CR>#<space>Workspace<CR><CR>#<space>Resonance calendar<CR><CR>#<space>Evening Reflection 
 au BufEnter diary.md :VimwikiDiaryGenerateLinks
-au BufEnter index.md :VimwikiGenerateLinks
+au BufEnter index.md :VimwikiGenerateLinks :VimwikiGenerateTagLinks
 au BufEnter diary.wiki :VimwikiDiaryGenerateLink
 map <leader>mt :VimwikiMakeDiaryNote<CR>
 map <leader>mn :VimwikiMakeTomorrowDiaryNote<CR>
-
-" let g:vimwiki_auto_header = 0
-" let g:vimwiki_markdown_header_style = 1
-" let g:vimwiki_tags_header_level = 1
-" let g:vimwiki_tags_header = 'Generated Tags'
-" let g:vimwiki_links_header_level = 1
-" let g:vimwiki_links_header = 'Generated Links'
-" let g:vimwiki_auto_chdir = 0
-" let g:vimwiki_map_prefix = '<Leader>w'
-" let g:vimwiki_toc_link_format = 0
-" let g:vimwiki_toc_header_level = 1
-" let g:vimwiki_toc_header = 'Contents'
-" let g:vimwiki_autowriteall = 1
-" let g:vimwiki_conceal_pre = 0
-" let g:vimwiki_conceal_onechar_markers = 1
-" let g:vimwiki_conceallevel = 2
-" let g:vimwiki_user_htmls = ''
-" let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr'
-" let g:vimwiki_html_header_numbering_sym = ''
-" let g:vimwiki_html_header_numbering = 0
-" let g:vimwiki_dir_link = ''
-" let g:vimwiki_markdown_link_ext = 0
-" let g:vimwiki_create_link = 1
-" let g:vimwiki_use_calendar = 1
-" let g:vimwiki_text_ignore_newline = 1
-" let g:vimwiki_list_ignore_newline = 1
-" let g:vimwiki_folding = ''
-" let g:vimwiki_listsym_rejected = '✗'
-" let g:vimwiki_listsyms = '✗○◐●✓'
-" let g:vimwiki_global_ext = 1
-" let g:vimwiki_hl_cb_checked = 0
-
-
-
 
 let g:vimwiki_diary_months = {
       \ 1: 'January', 2: 'February', 3: 'March',
@@ -100,3 +62,8 @@ let g:vimwiki_diary_months = {
       \ 7: 'July', 8: 'August', 9: 'September',
       \ 10: 'October', 11: 'November', 12: 'December'
       \ }
+
+let g:vim_markdown_folding_style_pythonic = 1
+
+au BufRead,BufNewFile *.md setlocal textwidth=80
+

@@ -103,6 +103,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'blindFS/vim-taskwarrior'
     Plug 'dhruvasagar/vim-table-mode'
     Plug 'dkarter/bullets.vim'
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
+"    Plug 'vim-pandoc/vim-pandoc'
+"    Plug 'vim-pandoc/vim-pandoc-syntax'
+"    Plug 'MikeCoder/markdown-preview'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
   endif
 
 
