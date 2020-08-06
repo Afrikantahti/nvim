@@ -105,10 +105,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dkarter/bullets.vim'
     Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'
-"    Plug 'preservim/nerdcommenter'
-"    Plug 'vim-pandoc/vim-pandoc'
-"    Plug 'vim-pandoc/vim-pandoc-syntax'
-"    Plug 'MikeCoder/markdown-preview'
+    Plug 'blindFS/vim-taskwarrior'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
     Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
   endif
