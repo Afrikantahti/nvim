@@ -39,6 +39,10 @@ let g:vimwiki_list = [
 " fix tab autocomplete, fix but table tab movement broken
 let g:vimwiki_table_mappings = 0
 
+" future version ???
+let g:vimwiki_tab_key = '<F7>'
+let g:vimwiki_shift_tab_key = '<F8>'
+
 autocmd FileType markdown setlocal textwidth=80 formatoptions+=t
 
 " ~~~~~ Diary Template

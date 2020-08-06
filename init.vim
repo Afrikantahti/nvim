@@ -55,3 +55,6 @@ au BufNewFile,BufReadPost,FilterReadPost,FileReadPost  * set nospell
 " https://realpython.com/python-debugging-pdb/ " breakpoint syntax is really cool
 " also look into profiling as well
 " let g:python_highlight_all=1
+
+" All searches incrase sensitive
+set ignorecase
