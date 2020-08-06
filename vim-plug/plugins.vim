@@ -48,14 +48,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'alvan/vim-closetag'
     " Themes
     Plug 'christianchiarulli/onedark.vim'
-    Plug 'kaicataldo/material.vim'
+    " Plug 'kaicataldo/material.vim'
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'tomasiser/vim-code-dark'
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
     Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
+    Plug 'vim-airline/vim-airline-themes'
     " Ranger
     " Plug 'francoiscabrol/ranger.vim'
     " Plug 'rbgrouleff/bclose.vim'
@@ -85,7 +85,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'honza/vim-snippets'
     Plug 'mattn/emmet-vim'
     " Better Comments
-    " Plug 'jbgutierrez/vim-better-comments'
+    Plug 'jbgutierrez/vim-better-comments'
     " Echo doc
     " Plug 'Shougo/echodoc.vim'
     " Interactive code
@@ -105,6 +105,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dkarter/bullets.vim'
     Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'
+"    Plug 'preservim/nerdcommenter'
 "    Plug 'vim-pandoc/vim-pandoc'
 "    Plug 'vim-pandoc/vim-pandoc-syntax'
 "    Plug 'MikeCoder/markdown-preview'
