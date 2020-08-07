@@ -8,6 +8,10 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+  " jsx syntax support
+  Plug 'maxmellon/vim-jsx-pretty'
+  
+  Plug 'suy/vim-context-commentstring'
   " Change dates fast
   Plug 'tpope/vim-speeddating'
   " Convert binary, hex, etc..
@@ -37,7 +41,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'easymotion/vim-easymotion'
     " Add some color
     Plug 'norcalli/nvim-colorizer.lua'
-    Plug 'junegunn/rainbow_parentheses.vim'
+    " Plug 'junegunn/rainbow_parentheses.vim'
+
+    Plug 'luochen1990/rainbow'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Cool Icons
@@ -55,7 +61,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
     Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    " Plug 'hardcoreplayers/spaceline.vim'
+    " Plug 'vim-airline/vim-airline-themes'
     " Ranger
     " Plug 'francoiscabrol/ranger.vim'
     " Plug 'rbgrouleff/bclose.vim'

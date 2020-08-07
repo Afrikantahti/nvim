@@ -25,19 +25,20 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 
 " Single mappings
-let g:which_key_map['/'] = [ 'gc'  , 'comment' ]
-let g:which_key_map['.'] = [ ':enew'                     , 'enew' ]
+let g:which_key_map['/'] = [ ':call Comment()'            , 'comment' ]
+let g:which_key_map['.'] = [ ':e $MYVIMRC'                , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                  , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
 let g:which_key_map[','] = [ 'Startify'                   , 'start screen' ]
-let g:which_key_map['c'] = [ ':set wrap'                    , 'Wrap']
 let g:which_key_map['d'] = [ ':bd'                        , 'delete buffer']
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
-let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
+let g:which_key_map['f'] = [ ':Farr'                      , 'find and replace' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
+let g:which_key_map['p'] = [ ':Files'                     , 'search files' ]
+let g:which_key_map['q'] = [ 'q'                          , 'quit' ]
 let g:which_key_map['r'] = [ ':RnvimrToggle'              , 'ranger' ]
 let g:which_key_map['S'] = [ ':SSave'                     , 'save session' ]
-let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
+let g:which_key_map['u'] = [ ':UndotreeToggle'            , 'undo tree']
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
 let g:which_key_map['t'] = [ ':TableModeToggle'                       , 'table mode' ]
@@ -51,11 +52,14 @@ let g:which_key_map.a = {
       \ 'name' : '+actions' ,
       \ 'c' : [':ColorizerToggle'        , 'colorizer'],
       \ 'e' : [':CocCommand explorer'    , 'explorer'],
+      \ 'l' : [':Bracey'                 , 'start live server'],
+      \ 'L' : [':BraceyStop'             , 'stop live server'],
       \ 'n' : [':set nonumber!'          , 'line-numbers'],
       \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
       \ 's' : [':let @/ = ""'            , 'remove search highlight'],
       \ 't' : [':FloatermToggle'         , 'terminal'],
-      \ 'v' : [':Vista!!'                , 'tag viewer']
+      \ 'v' : [':Codi'                   , 'virtual repl on'],
+      \ 'V' : [':Codi!'                  , 'virtual repl off'],
       \ }
 
 " b is for buffer
@@ -103,6 +107,33 @@ let g:which_key_map.s = {
       \ }
       " \ 's' : [':Snippets'     , 'snippets'],
 
+" g is for git
+let g:which_key_map.g = {
+      \ 'name' : '+git' ,
+      \ 'a' : [':Git add .'                        , 'add all'],
+      \ 'A' : [':Git add %'                        , 'add current'],
+      \ 'b' : [':Git blame'                        , 'blame'],
+      \ 'B' : [':GBrowse'                          , 'browse'],
+      \ 'c' : [':Git commit'                       , 'commit'],
+      \ 'd' : [':Git diff'                         , 'diff'],
+      \ 'D' : [':Gdiffsplit'                       , 'diff split'],
+      \ 'g' : [':GGrep'                            , 'git grep'],
+      \ 'G' : [':Gstatus'                          , 'status'],
+      \ 'h' : [':GitGutterLineHighlightsToggle'    , 'highlight hunks'],
+      \ 'H' : ['<Plug>(GitGutterPreviewHunk)'      , 'preview hunk'],
+      \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'next hunk'],
+      \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'prev hunk'],
+      \ 'l' : [':Git log'                          , 'log'],
+      \ 'p' : [':Git push'                         , 'push'],
+      \ 'P' : [':Git pull'                         , 'pull'],
+      \ 'r' : [':GRemove'                          , 'remove'],
+      \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
+      \ 'S' : [':!git status'                       , 'status'],
+      \ 't' : [':GitGutterSignsToggle'             , 'toggle signs'],
+      \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
+      \ 'v' : [':GV'                               , 'view commits'],
+      \ 'V' : [':GV!'                              , 'view buffer commits'],
+      \ }
 
 " l is for language server protocol
 let g:which_key_map.l = {
@@ -158,6 +189,24 @@ let g:which_key_map.t = {
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
       \ 's' : [':FloatermNew ncdu'                              , 'ncdu']
+      \ }
+
+" T is for terminal
+let g:which_key_map.T = {
+      \ 'name' : '+tabline' ,
+      \ 'b' : [':XTabListBuffers'         , 'list buffers'],
+      \ 'd' : [':XTabCloseBuffer'         , 'close buffer'],
+      \ 'D' : [':XTabDeleteTab'           , 'close tab'],
+      \ 'h' : [':XTabHideBuffer'          , 'hide buffer'],
+      \ 'i' : [':XTabInfo'                , 'info'],
+      \ 'l' : [':XTabLock'                , 'lock tab'],
+      \ 'm' : [':XTabMode'                , 'toggle mode'],
+      \ 'n' : [':tabNext'                 , 'next tab'],
+      \ 'N' : [':XTabMoveBufferNext'      , 'buffer->'],
+      \ 't' : [':tabnew'                  , 'new tab'],
+      \ 'p' : [':tabprevious'             , 'prev tab'],
+      \ 'P' : [':XTabMoveBufferPrev'      , '<-buffer'],
+      \ 'x' : [':XTabPinBuffer'           , 'pin buffer'],
       \ }
 
 " w is for wiki

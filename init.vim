@@ -24,7 +24,7 @@ else
   source $HOME/.config/nvim/themes/airline.vim
   source $HOME/.config/nvim/plug-config/rnvimr.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
-  source $HOME/.config/nvim/plug-config/nerd-commenter.vim
+  source $HOME/.config/nvim/plug-config/vim-commentary.vim
   source $HOME/.config/nvim/plug-config/rainbow.vim
   source $HOME/.config/nvim/plug-config/codi.vim
   source $HOME/.config/nvim/plug-config/quickscope.vim
@@ -39,20 +39,28 @@ else
   source $HOME/.config/nvim/plug-config/floaterm.vim
   source $HOME/.config/nvim/plug-config/vista.vim
   source $HOME/.config/nvim/plug-config/markdownpreview.vim
+  source $HOME/.config/nvim/plug-config/xtabline.vim
+  source $HOME/.config/nvim/plug-config/polyglot.vim
+  source $HOME/.config/nvim/plug-config/far.vim
+  source $HOME/.config/nvim/plug-config/tagalong.vim
+  source $HOME/.config/nvim/plug-config/illuminate.vim
+  source $HOME/.config/nvim/plug-config/bracey.vim
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
-  " source $HOME/.config/nvim/plug-config/easymotion.vim
+endif
+
+if !empty(glob("~/.config/nvim/paths.vim"))
+  source $HOME/.config/nvim/paths.vim
 endif
 
 " Experimental
 
-if !empty(glob("./paths.vim"))
-  source $HOME/.config/nvim/paths.vim
-endif
-let g:polyglot_disabled = ['csv']
-au BufNewFile,BufReadPost,FilterReadPost,FileReadPost  * set nospell
 
 " Python
 " https://realpython.com/python-debugging-pdb/ " breakpoint syntax is really cool
 " also look into profiling as well
 " let g:python_highlight_all=1
 
+
+" let g:vimspector_base_dir=expand( '$HOME/.config/nvim/vimspector-config' )
+" let g:vimspector_enable_mappings='HUMAN'
+" let g:spaceline_colorscheme = 'one'
