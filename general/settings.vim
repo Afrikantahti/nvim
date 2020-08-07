@@ -36,12 +36,14 @@ if !exists('g:vscode')
   set clipboard=unnamedplus               " Copy paste between vim and everything else
   set incsearch
   set guifont=Hack\ Nerd\ Font
-  " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  set fileencoding=utf-8
+  set ignorecase                          " All searches incrase sensitive
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   " set mmp=1300
   " set autochdir                           " Your working directory will always be the same as your working directory
-  " set foldcolumn=2                        " Folding abilities
+  set foldcolumn=2                        " Folding abilities
 
-  " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+" au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 

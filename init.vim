@@ -56,5 +56,3 @@ au BufNewFile,BufReadPost,FilterReadPost,FileReadPost  * set nospell
 " also look into profiling as well
 " let g:python_highlight_all=1
 
-" All searches incrase sensitive
-set ignorecase
