@@ -128,11 +128,12 @@ let g:which_key_map.g = {
       \ 'P' : [':Git pull'                         , 'pull'],
       \ 'r' : [':GRemove'                          , 'remove'],
       \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
-      \ 'S' : [':!git status'                       , 'status'],
+      \ 'S' : [':!git status'                      , 'status'],
       \ 't' : [':GitGutterSignsToggle'             , 'toggle signs'],
       \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
       \ 'v' : [':GV'                               , 'view commits'],
       \ 'V' : [':GV!'                              , 'view buffer commits'],
+      \ 'L' : [':LazyGit'                          , 'LazyGit'],
       \ }
 
 " l is for language server protocol

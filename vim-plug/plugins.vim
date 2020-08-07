@@ -96,8 +96,25 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Echo doc
     " Plug 'Shougo/echodoc.vim'
     " Interactive code
-    Plug 'ChristianChiarulli/codi.vim'
-
+    Plug 'metakirby5/codi.vim'
+    " Vim Wiki
+    " Plug 'https://github.com/vimwiki/vimwiki.git'
+    " Debugging
+    Plug 'puremourning/vimspector'
+    " Better tabline
+    Plug 'mg979/vim-xtabline'
+    " undo time travel
+    Plug 'mbbill/undotree'
+    " highlight all matches under cursor
+    Plug 'RRethy/vim-illuminate'
+    " Find and replace
+    Plug 'brooth/far.vim'
+    " Auto change html tags
+    Plug 'AndrewRadev/tagalong.vim'
+    " live server
+    Plug 'turbio/bracey.vim'
+    " Typescript syntax
+    Plug 'HerringtonDarkholme/yats.vim'
     """ Custom """
     " Vim Wiki
     Plug 'https://github.com/vimwiki/vimwiki.git'
@@ -105,7 +122,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'arcticicestudio/nord'
     Plug 'arcticicestudio/nord-vim'
     " Taskwiki / taskwarrior
-    Plug 'tbabej/taskwiki'
+    " Plug 'tbabej/taskwiki'
     Plug 'majutsushi/tagbar'
     Plug 'blindFS/vim-taskwarrior'
     Plug 'dhruvasagar/vim-table-mode'
