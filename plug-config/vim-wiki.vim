@@ -57,8 +57,8 @@ autocmd Filetype markdown inoremap <leader>day #<space><C-r>=strftime('%F')<CR><
 au BufEnter diary.md :VimwikiDiaryGenerateLinks
 au BufEnter index.md :VimwikiGenerateLinks :VimwikiGenerateTagLinks
 au BufEnter diary.wiki :VimwikiDiaryGenerateLink
-map <leader>mt :VimwikiMakeDiaryNote<CR>
-map <leader>mn :VimwikiMakeTomorrowDiaryNote<CR>
+"map <leader>mt :VimwikiMakeDiaryNote<CR>
+"map <leader>mn :VimwikiMakeTomorrowDiaryNote<CR>
 
 let g:vimwiki_diary_months = {
       \ 1: 'January', 2: 'February', 3: 'March',
