@@ -55,7 +55,7 @@ let g:which_key_map.a = {
       \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
       \ 's' : [':let @/ = ""'            , 'remove search highlight'],
       \ 't' : [':FloatermToggle'         , 'terminal'],
-      \ 'v' : [':Vista!!'                , 'tag viewer'],
+      \ 'v' : [':Vista!!'                , 'tag viewer']
       \ }
 
 " b is for buffer
@@ -70,7 +70,7 @@ let g:which_key_map.b = {
       \ 'n' : ['bnext'     , 'next-buffer']     ,
       \ 'p' : ['bprevious' , 'previous-buffer'] ,
       \ '?' : ['Buffers'   , 'fzf-buffer']      ,
-      \ '.' : [':close'    , 'close windows']      ,
+      \ '.' : [':close'    , 'close windows']      
       \ }
 
 " s is for search
@@ -99,7 +99,7 @@ let g:which_key_map.s = {
       \ 'T' : [':BTags'                 , 'buffer tags'],
       \ 'w' : [':Windows'               , 'search windows'],
       \ 'y' : [':Filetypes'             , 'file types'],
-      \ 'z' : [':FZF'                   , 'FZF'],
+      \ 'z' : [':FZF'                   , 'FZF']
       \ }
       " \ 's' : [':Snippets'     , 'snippets'],
 
@@ -141,7 +141,7 @@ let g:which_key_map.l = {
       \ 'v' : [':Vista!!'                            , 'tag viewer'],
       \ 'z' : [':CocDisable'                         , 'disable CoC'],
       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
-      \ 'M' : [':CocList marketplace'                , 'CoC Marketplace'],
+      \ 'M' : [':CocList marketplace'                , 'CoC Marketplace']
       \ }
 
 " t is for terminal
@@ -157,7 +157,7 @@ let g:which_key_map.t = {
       \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
-      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+      \ 's' : [':FloatermNew ncdu'                              , 'ncdu']
       \ }
 
 " w is for wiki
@@ -166,7 +166,7 @@ let g:which_key_map.w = {
       \ 'd' : [':VimwikiMakeDiaryNote'                          , 'Today diary'],
       \ 't' : [':VimwikiMakeTomorrowDiaryNote'                  , 'Tomorrow diary'],
       \ 'b' : [':MarkdownPreview'                            , 'Preview'],
-      \ 's' : [':Toc'                                           , 'Toc'],
+      \ 's' : [':Toc'                                           , 'Toc']
       \ }
 
 " Global
