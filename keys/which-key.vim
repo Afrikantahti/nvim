@@ -42,8 +42,6 @@ let g:which_key_map['u'] = [ ':UndotreeToggle'            , 'undo tree']
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
 let g:which_key_map['t'] = [ ':TableModeToggle'                       , 'table mode' ]
-let g:which_key_map['g'] = [ ':LazyGit'                       , 'Lazygit' ]
-
 
 " Group mappings
 
@@ -133,7 +131,7 @@ let g:which_key_map.g = {
       \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
       \ 'v' : [':GV'                               , 'view commits'],
       \ 'V' : [':GV!'                              , 'view buffer commits'],
-      \ 'L' : [':LazyGit'                          , 'LazyGit'],
+      \ 'L' : [':FloatermNew lazygit'             , 'LazyGit'],
       \ }
 
 " l is for language server protocol
@@ -173,7 +171,7 @@ let g:which_key_map.l = {
       \ 'v' : [':Vista!!'                            , 'tag viewer'],
       \ 'z' : [':CocDisable'                         , 'disable CoC'],
       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
-      \ 'M' : [':CocList marketplace'                , 'CoC Marketplace']
+      \ 'M' : [':CocList marketplace'                , 'CoC Marketplace'],
       \ }
 
 " t is for terminal
@@ -181,7 +179,7 @@ let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
       \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
-      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
+      \ 'g' : [':FloatermNew lazygit'                           , 'LazyGit'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'n' : [':FloatermNew node'                              , 'node'],
       \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
@@ -189,7 +187,7 @@ let g:which_key_map.t = {
       \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
-      \ 's' : [':FloatermNew ncdu'                              , 'ncdu']
+      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
       \ }
 
 " T is for terminal
@@ -215,8 +213,8 @@ let g:which_key_map.w = {
       \ 'name' : '+wiki' ,
       \ 'd' : [':VimwikiMakeDiaryNote'                          , 'Today diary'],
       \ 't' : [':VimwikiMakeTomorrowDiaryNote'                  , 'Tomorrow diary'],
-      \ 'b' : [':MarkdownPreview'                            , 'Preview'],
-      \ 's' : [':Toc'                                           , 'Toc']
+      \ 'b' : [':MarkdownPreview'                               , 'Preview'],
+      \ 's' : [':Toc'                                           , 'Toc'],
       \ }
 
 " Global
