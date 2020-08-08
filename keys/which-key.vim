@@ -1,3 +1,5 @@
+" Leader Key Maps
+
 " Map leader to which_key
 nnoremap <silent> <leader> :silent <c-u> :silent WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
@@ -25,23 +27,24 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 
 " Single mappings
-let g:which_key_map['/'] = [ ':call Comment()'            , 'comment' ]
-let g:which_key_map['.'] = [ ':e $MYVIMRC'                , 'open init' ]
-let g:which_key_map[';'] = [ ':Commands'                  , 'commands' ]
-let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
-let g:which_key_map[','] = [ 'Startify'                   , 'start screen' ]
-let g:which_key_map['d'] = [ ':bd'                        , 'delete buffer']
-let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
-let g:which_key_map['f'] = [ ':Farr'                      , 'find and replace' ]
-let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
-let g:which_key_map['p'] = [ ':Files'                     , 'search files' ]
-let g:which_key_map['q'] = [ 'q'                          , 'quit' ]
-let g:which_key_map['r'] = [ ':RnvimrToggle'              , 'ranger' ]
-let g:which_key_map['S'] = [ ':SSave'                     , 'save session' ]
-let g:which_key_map['u'] = [ ':UndotreeToggle'            , 'undo tree']
-let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
-let g:which_key_map['t'] = [ ':TableModeToggle'                       , 'table mode' ]
+let g:which_key_map['/'] = [ ':call Comment()'                    , 'comment' ]
+let g:which_key_map['.'] = [ ':e $MYVIMRC'                        , 'open init' ]
+let g:which_key_map[';'] = [ ':Commands'                          , 'commands' ]
+let g:which_key_map['='] = [ '<C-W>='                             , 'balance windows' ]
+let g:which_key_map[','] = [ 'Startify'                           , 'start screen' ]
+let g:which_key_map['d'] = [ ':bd'                                , 'delete buffer']
+let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
+let g:which_key_map['f'] = [ ':Farr'                              , 'find and replace' ]
+let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below']
+let g:which_key_map['m'] = [ ':call WindowSwap#EasyWindowSwap()'  , 'move window' ]
+let g:which_key_map['p'] = [ ':Files'                             , 'search files' ]
+let g:which_key_map['q'] = [ 'q'                                  , 'quit' ]
+let g:which_key_map['r'] = [ ':RnvimrToggle'                      , 'ranger' ]
+let g:which_key_map['S'] = [ ':SSave'                             , 'save session' ]
+let g:which_key_map['u'] = [ ':UndotreeToggle'                    , 'undo tree']
+let g:which_key_map['v'] = [ '<C-W>v'                             , 'split right']
+let g:which_key_map['W'] = [ 'w'                                  , 'write' ]
+let g:which_key_map['z'] = [ 'Goyo'                               , 'zen' ]
 
 " Group mappings
 
@@ -52,12 +55,15 @@ let g:which_key_map.a = {
       \ 'e' : [':CocCommand explorer'    , 'explorer'],
       \ 'l' : [':Bracey'                 , 'start live server'],
       \ 'L' : [':BraceyStop'             , 'stop live server'],
+      \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
+      \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
       \ 'n' : [':set nonumber!'          , 'line-numbers'],
       \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
       \ 's' : [':let @/ = ""'            , 'remove search highlight'],
       \ 't' : [':FloatermToggle'         , 'terminal'],
       \ 'v' : [':Codi'                   , 'virtual repl on'],
       \ 'V' : [':Codi!'                  , 'virtual repl off'],
+      \ 'w' : [':StripWhitespace'        , 'strip whitespace'],
       \ }
 
 " b is for buffer
@@ -74,6 +80,24 @@ let g:which_key_map.b = {
       \ '?' : ['Buffers'   , 'fzf-buffer']      ,
       \ '.' : [':close'    , 'close windows']      
       \ }
+
+" k is for task
+let g:which_key_map.k = {
+      \ 'name' : '+task' ,
+      \ 'c' : [':AsyncTask file-compile'      , 'compile file'],
+      \ 'b' : [':AsyncTask project-build'     , 'build project'],
+      \ 'e' : [':AsyncTaskEdit'               , 'edit local tasks'],
+      \ 'f' : [':AsyncTaskFzf'                , 'find task'],
+      \ 'g' : [':AsyncTaskEdit!'              , 'edit global tasks'],
+      \ 'h' : [':AsyncTaskList!'              , 'list hidden tasks'],
+      \ 'l' : [':CocList tasks'               , 'list tasks'],
+      \ 'm' : [':AsyncTaskMacro'              , 'macro help'],
+      \ 'o' : [':copen'                       , 'open task view'],
+      \ 'r' : [':AsyncTask file-run'          , 'run file'],
+      \ 'p' : [':AsyncTask project-run'       , 'run project'],
+      \ 'x' : [':cclose'                      , 'close task view'],
+      \ }
+      " \ 'l' : [':AsyncTaskList'               , 'list tasks'],
 
 " s is for search
 let g:which_key_map.s = {
@@ -119,6 +143,7 @@ let g:which_key_map.g = {
       \ 'G' : [':Gstatus'                          , 'status'],
       \ 'h' : [':GitGutterLineHighlightsToggle'    , 'highlight hunks'],
       \ 'H' : ['<Plug>(GitGutterPreviewHunk)'      , 'preview hunk'],
+      \ 'i' : [':Gist -b'                          , 'post gist'],
       \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'next hunk'],
       \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'prev hunk'],
       \ 'l' : [':Git log'                          , 'log'],
@@ -132,6 +157,19 @@ let g:which_key_map.g = {
       \ 'v' : [':GV'                               , 'view commits'],
       \ 'V' : [':GV!'                              , 'view buffer commits'],
       \ 'L' : [':FloatermNew lazygit'             , 'LazyGit'],
+      \ }
+
+let g:which_key_map.G = {
+      \ 'name' : '+gist' ,
+      \ 'a' : [':Gist -a'                          , 'post gist anon'],
+      \ 'b' : [':Gist -b'                          , 'post gist browser'],
+      \ 'd' : [':Gist -d'                          , 'delete gist'],
+      \ 'e' : [':Gist -e'                          , 'edit gist'],
+      \ 'l' : [':Gist -l'                          , 'list public gists'],
+      \ 's' : [':Gist -ls'                         , 'list starred gists'],
+      \ 'm' : [':Gist -m'                          , 'post gist all buffers'],
+      \ 'p' : [':Gist -P'                          , 'post public gist '],
+      \ 'P' : [':Gist -p'                          , 'post private gist '],
       \ }
 
 " l is for language server protocol
@@ -184,6 +222,7 @@ let g:which_key_map.t = {
       \ 'n' : [':FloatermNew node'                              , 'node'],
       \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
       \ 'p' : [':FloatermNew python'                            , 'python'],
+      \ 'm' : [':FloatermNew lazynpm'                           , 'npm'],
       \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ 'y' : [':FloatermNew ytop'                              , 'ytop'],

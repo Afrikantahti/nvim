@@ -124,28 +124,41 @@ Example:
   }
   ```
 
+## TabNine
+
+To use tabnine enter the following in a buffer:
+
+```
+TabNine::config
+```
+
+## Vim Gists
+
+To use **vim-gists** you will need to configure the following:
+
+```
+git config --global github.user <username>
+```
+
 ## TODO
 
-- async task/run
 - vimspector
-- markdown preview
-- neomake
 - ale
-- multiple cursors
-- git messenger
-- markdown table
-- spaceline (add colorscheme for mach 2)
-- add better whitespace plugin and a toggle
-- People asked about vimwiki I kinda hate it but maybe I'll add it
-- neovide
-- move coc to coc.old in install script
-- later manually link pylance
-- lazynpm for floaterm
 
-## coc additions to check out
+## LOW PRIORITY
+
+- git messenger
+- multiple cursors
+- markdown table
+- People asked about vimwiki I kinda hate it but maybe I'll add it
+- spaceline (add colorscheme for mach2)
+- tpope/vim-dadbod
+- later manually link pylance
+- neovide
+
+## CoC extensions to check out
 
 - coc-fzf
-- coc-async-tasks
 - coc-stylelintplus
 - coc-highlight (just for pick color, highlight is too slow)
 - coc-floaterm
@@ -157,6 +170,8 @@ Example:
 - native lsp
 - treesitter
 
-## VSCode integration
+## Things to look into
 
-We will be integrating with VSCode using [this](https://github.com/asvetliakov/vscode-neovim)
+**Python**
+https://realpython.com/python-debugging-pdb/ " breakpoint syntax is really cool
+also look into profiling as well

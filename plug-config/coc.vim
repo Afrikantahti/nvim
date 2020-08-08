@@ -3,6 +3,7 @@
     \ 'coc-actions',
     \ 'coc-lists',
     \ 'coc-emmet',
+    \ 'coc-tasks',
     \ 'coc-pairs',
     \ 'coc-tsserver',
     \ 'coc-floaterm',
@@ -21,6 +22,7 @@
     \ 'coc-yank',
     \ 'coc-json',
     \ 'coc-marketplace',
+    \ 'coc-tabnine',
     \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
