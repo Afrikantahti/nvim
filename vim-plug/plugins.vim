@@ -100,81 +100,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Easily Create Gists
   Plug 'mattn/vim-gist'
   Plug 'mattn/webapi-vim'
-
-  " Plugin Graveyard
-
-    Plug 'luochen1990/rainbow'
-    " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
-    " Cool Icons
-    Plug 'ryanoasis/vim-devicons'
-    " Auto pairs for '(' '[' '{' 
-    Plug 'jiangmiao/auto-pairs'
-    " Closetags
-    Plug 'alvan/vim-closetag'
-    " Themes
-    Plug 'christianchiarulli/onedark.vim'
-    " Plug 'kaicataldo/material.vim'
-    Plug 'NLKNguyen/papercolor-theme'
-    Plug 'tomasiser/vim-code-dark'
-    " Intellisense
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Status Line
-    Plug 'vim-airline/vim-airline'
-    " Plug 'hardcoreplayers/spaceline.vim'
-    " Plug 'vim-airline/vim-airline-themes'
-    " Ranger
-    " Plug 'francoiscabrol/ranger.vim'
-    " Plug 'rbgrouleff/bclose.vim'
-    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
-    " FZF
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    " Git
-    " Plug 'mhinz/vim-signify'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-rhubarb'
-    Plug 'junegunn/gv.vim'
-    " Terminal
-    Plug 'voldikss/vim-floaterm'
-    " Start Screen
-    Plug 'mhinz/vim-startify'
-    " Vista
-    Plug 'liuchengxu/vista.vim'
-    " See what keys do like in emacs
-    Plug 'liuchengxu/vim-which-key'
-    " Zen mode
-    Plug 'junegunn/goyo.vim'
-    " Making stuff
-    Plug 'neomake/neomake'
-    " Snippets
-    Plug 'honza/vim-snippets'
-    Plug 'mattn/emmet-vim'
-    " Better Comments
-    Plug 'jbgutierrez/vim-better-comments'
-    " Echo doc
-    " Plug 'Shougo/echodoc.vim'
-    " Interactive code
-    Plug 'metakirby5/codi.vim'
-    " Vim Wiki
-    " Plug 'https://github.com/vimwiki/vimwiki.git'
-    " Debugging
-    Plug 'puremourning/vimspector'
-    " Better tabline
-    Plug 'mg979/vim-xtabline'
-    " undo time travel
-    Plug 'mbbill/undotree'
-    " highlight all matches under cursor
-    Plug 'RRethy/vim-illuminate'
-    " Find and replace
-    Plug 'brooth/far.vim'
-    " Auto change html tags
-    Plug 'AndrewRadev/tagalong.vim'
-    " live server
-    Plug 'turbio/bracey.vim'
-    " Typescript syntax
-    Plug 'HerringtonDarkholme/yats.vim'
     """ Custom """
     " Vim Wiki
     Plug 'https://github.com/vimwiki/vimwiki.git'
@@ -186,13 +111,87 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'majutsushi/tagbar'
     Plug 'blindFS/vim-taskwarrior'
     Plug 'dhruvasagar/vim-table-mode'
-    Plug 'dkarter/bullets.vim'
-    Plug 'godlygeek/tabular'
+"    Plug 'dkarter/bullets.vim'
+"    Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'
     Plug 'blindFS/vim-taskwarrior'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
     Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
-  endif
+
+  " Plugin Graveyard
+
+    " Plug 'luochen1990/rainbow'
+    " " Better Syntax Support
+    " Plug 'sheerun/vim-polyglot'
+    " " Cool Icons
+    " Plug 'ryanoasis/vim-devicons'
+    " " Auto pairs for '(' '[' '{' 
+    " Plug 'jiangmiao/auto-pairs'
+    " " Closetags
+    " Plug 'alvan/vim-closetag'
+    " " Themes
+    " Plug 'christianchiarulli/onedark.vim'
+    " " Plug 'kaicataldo/material.vim'
+    " Plug 'NLKNguyen/papercolor-theme'
+    " Plug 'tomasiser/vim-code-dark'
+    " " Intellisense
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " " Status Line
+    " Plug 'vim-airline/vim-airline'
+    " " Plug 'hardcoreplayers/spaceline.vim'
+    " " Plug 'vim-airline/vim-airline-themes'
+    " " Ranger
+    " " Plug 'francoiscabrol/ranger.vim'
+    " " Plug 'rbgrouleff/bclose.vim'
+    " Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+    " " FZF
+    " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    " Plug 'junegunn/fzf.vim'
+    " " Git
+    " " Plug 'mhinz/vim-signify'
+    " Plug 'airblade/vim-gitgutter'
+    " Plug 'tpope/vim-fugitive'
+    " Plug 'tpope/vim-rhubarb'
+    " Plug 'junegunn/gv.vim'
+    " " Terminal
+    " Plug 'voldikss/vim-floaterm'
+    " " Start Screen
+    " Plug 'mhinz/vim-startify'
+    " " Vista
+    " Plug 'liuchengxu/vista.vim'
+    " " See what keys do like in emacs
+    " Plug 'liuchengxu/vim-which-key'
+    " " Zen mode
+    " Plug 'junegunn/goyo.vim'
+    " " Making stuff
+    " Plug 'neomake/neomake'
+    " " Snippets
+    " Plug 'honza/vim-snippets'
+    " Plug 'mattn/emmet-vim'
+    " " Better Comments
+    " Plug 'jbgutierrez/vim-better-comments'
+    " " Echo doc
+    " " Plug 'Shougo/echodoc.vim'
+    " " Interactive code
+    " Plug 'metakirby5/codi.vim'
+    " " Vim Wiki
+    " " Plug 'https://github.com/vimwiki/vimwiki.git'
+    " " Debugging
+    " Plug 'puremourning/vimspector'
+    " " Better tabline
+    " Plug 'mg979/vim-xtabline'
+    " " undo time travel
+    " Plug 'mbbill/undotree'
+    " " highlight all matches under cursor
+    " Plug 'RRethy/vim-illuminate'
+    " " Find and replace
+    " Plug 'brooth/far.vim'
+    " " Auto change html tags
+    " Plug 'AndrewRadev/tagalong.vim'
+    " " live server
+    " Plug 'turbio/bracey.vim'
+    " " Typescript syntax
+    " Plug 'HerringtonDarkholme/yats.vim'
 
 
 call plug#end()
