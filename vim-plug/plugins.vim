@@ -96,23 +96,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Easily Create Gists
   Plug 'mattn/vim-gist'
   Plug 'mattn/webapi-vim'
-    """ Custom """
-    " Vim Wiki
-    Plug 'https://github.com/vimwiki/vimwiki.git'
-    " nord theme
-    Plug 'arcticicestudio/nord'
-    Plug 'arcticicestudio/nord-vim'
-    " Taskwiki / taskwarrior
-    " Plug 'tbabej/taskwiki'
-    Plug 'majutsushi/tagbar'
-    Plug 'blindFS/vim-taskwarrior'
-    Plug 'dhruvasagar/vim-table-mode'
-"    Plug 'dkarter/bullets.vim'
-"    Plug 'godlygeek/tabular'
-    Plug 'plasticboy/vim-markdown'
-    Plug 'blindFS/vim-taskwarrior'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-    Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 
   " Plugin Graveyard
 
@@ -148,6 +131,24 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Plug 'preservim/nerdcommenter'
   " Plug 'brooth/far.vim'
   " Plug 'atishay/far.vim'
+
+    """ Custom """
+    " Vim Wiki
+    Plug 'https://github.com/vimwiki/vimwiki.git'
+    " nord theme
+    Plug 'arcticicestudio/nord'
+    Plug 'arcticicestudio/nord-vim'
+    " Taskwiki / taskwarrior
+    " Plug 'tbabej/taskwiki'
+    Plug 'majutsushi/tagbar'
+    Plug 'blindFS/vim-taskwarrior'
+    Plug 'dhruvasagar/vim-table-mode'
+"    Plug 'dkarter/bullets.vim'
+"    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
+    Plug 'blindFS/vim-taskwarrior'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+    Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 
 call plug#end()
 
