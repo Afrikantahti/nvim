@@ -10,6 +10,9 @@ let g:which_key_map =  {}
 let g:which_key_sep = '→'
 " set timeoutlen=100
 
+" Coc Search & refactor
+nnoremap <leader>? :CocSearch <C-R>=expand("<cword>")<CR><CR>
+let g:which_key_map['?'] = 'search word'
 
 " Not a fan of floating windows for this
 let g:which_key_use_floating_win = 0
@@ -31,8 +34,7 @@ let g:which_key_map['/'] = [ ':call Comment()'                    , 'comment' ]
 let g:which_key_map['.'] = [ ':e $MYVIMRC'                        , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                          , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                             , 'balance windows' ]
-let g:which_key_map[','] = [ 'Startify'                           , 'start screen' ]
-let g:which_key_map['d'] = [ ':bd'                                , 'delete buffer']
+let g:which_key_map['d'] = [ ':Bdelete'                           , 'delete buffer']
 let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
 let g:which_key_map['f'] = [ ':Farr'                              , 'find and replace' ]
 let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below']
@@ -40,7 +42,6 @@ let g:which_key_map['m'] = [ ':call WindowSwap#EasyWindowSwap()'  , 'move window
 let g:which_key_map['p'] = [ ':Files'                             , 'search files' ]
 let g:which_key_map['q'] = [ 'q'                                  , 'quit' ]
 let g:which_key_map['r'] = [ ':RnvimrToggle'                      , 'ranger' ]
-let g:which_key_map['S'] = [ ':SSave'                             , 'save session' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'                    , 'undo tree']
 let g:which_key_map['v'] = [ '<C-W>v'                             , 'split right']
 let g:which_key_map['W'] = [ 'w'                                  , 'write' ]
@@ -71,7 +72,7 @@ let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
       \ '1' : ['b1'        , 'buffer 1']        ,
       \ '2' : ['b2'        , 'buffer 2']        ,
-      \ 'd' : ['bd'        , 'delete-buffer']   ,
+      \ 'd' : [':Bdelete'        , 'delete-buffer']   ,
       \ 'f' : ['bfirst'    , 'first-buffer']    ,
       \ 'h' : ['Startify'  , 'home-buffer']     ,
       \ 'l' : ['blast'     , 'last-buffer']     ,
@@ -129,6 +130,15 @@ let g:which_key_map.s = {
       \ }
       " \ 's' : [':Snippets'     , 'snippets'],
 
+let g:which_key_map.S = {
+      \ 'name' : '+Session' ,
+      \ 'c' : [':SClose'          , 'Close Session']  ,
+      \ 'd' : [':SDelete'         , 'Delete Session'] ,
+      \ 'l' : [':SLoad'           , 'Load Session']     ,
+      \ 's' : [':Startify'        , 'Start Page']     ,
+      \ 'S' : [':SSave'           , 'Save Session']   ,
+      \ }
+
 " g is for git
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
@@ -147,6 +157,7 @@ let g:which_key_map.g = {
       \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'next hunk'],
       \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'prev hunk'],
       \ 'l' : [':Git log'                          , 'log'],
+      \ 'm' : ['<Plug>(git-messenger)'             , 'message'],
       \ 'p' : [':Git push'                         , 'push'],
       \ 'P' : [':Git pull'                         , 'pull'],
       \ 'r' : [':GRemove'                          , 'remove'],

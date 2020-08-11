@@ -1,6 +1,9 @@
   let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-actions',
+    \ 'coc-sh',
+    \ 'coc-java-debug',
+    \ 'coc-java',
     \ 'coc-lists',
     \ 'coc-emmet',
     \ 'coc-tasks',
@@ -23,6 +26,7 @@
     \ 'coc-json',
     \ 'coc-marketplace',
     \ 'coc-tabnine',
+    \ 'coc-highlight',
     \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.

@@ -19,6 +19,7 @@ source $HOME/.config/nvim/themes/airline.vim
 
 " Plugin Configuration
 source $HOME/.config/nvim/plug-config/rnvimr.vim
+source $HOME/.config/nvim/plug-config/better-whitespace.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/vim-commentary.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
@@ -31,6 +32,7 @@ source $HOME/.config/nvim/plug-config/goyo.vim
 source $HOME/.config/nvim/plug-config/vim-rooter.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/gitgutter.vim
+source $HOME/.config/nvim/plug-config/git-messenger.vim
 source $HOME/.config/nvim/plug-config/closetags.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/vista.vim
@@ -43,6 +45,8 @@ source $HOME/.config/nvim/plug-config/bracey.vim
 source $HOME/.config/nvim/plug-config/asynctask.vim
 source $HOME/.config/nvim/plug-config/window-swap.vim
 source $HOME/.config/nvim/plug-config/markdown-preview.vim
+" source $HOME/.config/nvim/plug-config/vimspector.vim " Uncomment if you want to use Vimspector
+" source $HOME/.config/nvim/plug-config/ale.vim
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
 " Add paths to node and python here
@@ -50,6 +54,3 @@ if !empty(glob("~/.config/nvim/paths.vim"))
   source $HOME/.config/nvim/paths.vim
 endif
 
-" Experimental
-let g:vimspector_base_dir=expand( '$HOME/.config/nvim/vimspector-config' )
-" let g:vimspector_enable_mappings='HUMAN'

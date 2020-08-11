@@ -55,6 +55,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
+  Plug 'rhysd/git-messenger.vim'
   " Terminal
   Plug 'voldikss/vim-floaterm'
   " Start Screen
@@ -71,7 +72,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Interactive code
   Plug 'metakirby5/codi.vim'
   " Debugging
-  Plug 'puremourning/vimspector'
+  " Plug 'puremourning/vimspector'
   " Better tabline
   Plug 'mg979/vim-xtabline'
   " undo time travel
@@ -96,20 +97,22 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Easily Create Gists
   Plug 'mattn/vim-gist'
   Plug 'mattn/webapi-vim'
-
+  " Async Linting Engine
+  " TODO make sure to add ale config before plugin
+  " Plug 'dense-analysis/ale'
+  " Better Whitespace
+  Plug 'ntpeters/vim-better-whitespace'
+  " Multiple Cursors
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'moll/vim-bbye'
   " Plugin Graveyard
 
-  " Better Whitespace
-  " Plug 'ntpeters/vim-better-whitespace'
   " jsx syntax support
   " Plug 'maxmellon/vim-jsx-pretty'
   " Typescript syntax
   " Plug 'HerringtonDarkholme/yats.vim'
   " Multiple Cursors
   " Plug 'terryma/vim-multiple-cursors'
-  " Async Linting Engine
-  " TODO make sure to add ale config before plugin
-  " Plug 'dense-analysis/ale'
   " Plug 'kaicataldo/material.vim'
   " Plug 'NLKNguyen/papercolor-theme'
   " Plug 'tomasiser/vim-code-dark'

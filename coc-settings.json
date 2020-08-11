@@ -13,9 +13,8 @@
   "diagnostic.warningSign": " ",
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
-  // "diagnostic.virtualText": true, // this won't work with codelens when error on same line
-
   // "diagnostic.displayByAle": true,
+  // "diagnostic.virtualText": true, // this won't work with codelens when error on same line
 
   // codelens TODO what does this get me?
   // "codeLens.enable": true,
@@ -66,15 +65,6 @@
   "explorer.keyMappings": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
-  },
-
-  "languageserver": {
-    "bash": {
-      "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
-    }
   },
 
   //coc-emoji
