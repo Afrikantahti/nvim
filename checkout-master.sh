@@ -1,5 +1,5 @@
 #git checkout master
-git pull https://github.com/ChristianChiarulli/nvim
+git pull git@github.com:ChristianChiarulli/nvim.git
 
 # https://www.chrisatmachine.com/Git/01-Merging-Upstream-Repo-Fork/
 git fetch upstream
