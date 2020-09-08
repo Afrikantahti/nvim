@@ -159,10 +159,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Taskwiki / taskwarrior
     " Plug 'tbabej/taskwiki'
     Plug 'majutsushi/tagbar'
-    Plug 'blindFS/vim-taskwarrior'
+    " Plug 'blindFS/vim-taskwarrior'
     Plug 'dhruvasagar/vim-table-mode'
-"    Plug 'dkarter/bullets.vim'
-"    Plug 'godlygeek/tabular'
+   " Plug 'dkarter/bullets.vim'
+   " Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'
     Plug 'blindFS/vim-taskwarrior'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
