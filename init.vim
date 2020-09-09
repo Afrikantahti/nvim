@@ -65,6 +65,3 @@ endif
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-" Custom
-set ignorecase
-au BufNewFile,BufReadPost,FilterReadPost,FileReadPost  * set nospell
