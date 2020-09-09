@@ -65,3 +65,6 @@ endif
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
+" Custom
+au BufNewFile,BufReadPost,FilterReadPost,FileReadPost  * set nospell
+
