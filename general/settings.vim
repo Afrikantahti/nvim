@@ -49,3 +49,5 @@ cmap w!! w !sudo tee %
 " Custom
 set ignorecase
 au BufNewFile,BufReadPost,FilterReadPost,FileReadPost  * set nospell
+set wrap
+set guifont=JetBrainsMono\ Nerd\ Font
