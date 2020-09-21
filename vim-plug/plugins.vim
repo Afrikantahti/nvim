@@ -168,6 +168,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
     " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
     Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
+    Plug 'axvr/org.vim'
 
 call plug#end()
 
