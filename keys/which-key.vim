@@ -1,5 +1,3 @@
-" Leader Key Maps
-
 let @s = 'veS"'
 
 " Timeout
@@ -38,41 +36,6 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 
 " Single mappings
-<<<<<<< HEAD
-let g:which_key_map['/'] = [ ':call Comment()'                    , 'comment' ]
-let g:which_key_map['.'] = [ ':e $MYVIMRC'                        , 'open init' ]
-let g:which_key_map[';'] = [ ':Commands'                          , 'commands' ]
-let g:which_key_map['='] = [ '<C-W>='                             , 'balance windows' ]
-let g:which_key_map['d'] = [ ':Bdelete'                           , 'delete buffer']
-let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
-let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below']
-let g:which_key_map['m'] = [ ':call WindowSwap#EasyWindowSwap()'  , 'move window' ]
-let g:which_key_map['n'] = [ ':let @/ = ""'                       , 'no highlight' ]
-let g:which_key_map['p'] = [ ':Files'                             , 'search files' ]
-let g:which_key_map['q'] = [ 'q'                                  , 'quit' ]
-let g:which_key_map['r'] = [ ':RnvimrToggle'                      , 'ranger' ]
-let g:which_key_map['u'] = [ ':UndotreeToggle'                    , 'undo tree']
-let g:which_key_map['v'] = [ '<C-W>v'                             , 'split right']
-let g:which_key_map['W'] = [ 'w'                                  , 'write' ]
-let g:which_key_map['z'] = [ 'Goyo'                               , 'zen' ]
-let g:which_key_map['O'] = [ ':!openfile "%"'                       , 'Openfile' ]
-=======
-let g:which_key_map['/'] = [ ':call Comment()'                                 , 'comment' ]
-let g:which_key_map['.'] = [ ':e $MYVIMRC'                                     , 'open init' ]
-let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
-let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
-let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
-let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
-let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
-let g:which_key_map['o'] = [ ':RnvimrToggle'                                   , 'open' ]
-let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
-let g:which_key_map['q'] = [ '<Plug>(coc-fix-current)'                         , 'quickfix' ]
-let g:which_key_map['T'] = [ ':TSHighlightCapturesUnderCursor'                 , 'treesitter highlight' ]
-let g:which_key_map['u'] = [ ':UndotreeToggle'                                 , 'undo tree']
-let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
-let g:which_key_map['W'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'move window' ]
-let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
->>>>>>> 86366002e29ccac58bf99ac24ae16cbf77d2c093
 
 " Group mappings
 
@@ -363,35 +326,6 @@ let g:which_key_map.t = {
       \ }
 
 " w is for wiki
-<<<<<<< HEAD
-let g:which_key_map.w = {
-      \ 'name' : '+wiki' ,
-      \ 'd' : [':VimwikiMakeDiaryNote'                          , 'Today diary'],
-      \ 't' : [':VimwikiMakeTomorrowDiaryNote'                  , 'Tomorrow diary'],
-      \ 'b' : [':MarkdownPreview'                               , 'Preview'],
-      \ 's' : [':Toc'                                           , 'Toc'],
-      \ }
-=======
-" let g:which_key_map.w = {
-"       \ 'name' : '+wiki' ,
-"       \ 'w' : ['<Plug>VimwikiIndex'                              , 'ncdu'],
-"       \ 'n' : ['<plug>(wiki-open)'                              , 'ncdu'],
-"       \ 'j' : ['<plug>(wiki-journal)'                              , 'ncdu'],
-"       \ 'R' : ['<plug>(wiki-reload)'                              , 'ncdu'],
-"       \ 'c' : ['<plug>(wiki-code-run)'                              , 'ncdu'],
-"       \ 'b' : ['<plug>(wiki-graph-find-backlinks)'                              , 'ncdu'],
-"       \ 'g' : ['<plug>(wiki-graph-in)'                              , 'ncdu'],
-"       \ 'G' : ['<plug>(wiki-graph-out)'                              , 'ncdu'],
-"       \ 'l' : ['<plug>(wiki-link-toggle)'                              , 'ncdu'],
-"       \ 'd' : ['<plug>(wiki-page-delete)'                              , 'ncdu'],
-"       \ 'r' : ['<plug>(wiki-page-rename)'                              , 'ncdu'],
-"       \ 't' : ['<plug>(wiki-page-toc)'                              , 'ncdu'],
-"       \ 'T' : ['<plug>(wiki-page-toc-local)'                              , 'ncdu'],
-"       \ 'e' : ['<plug>(wiki-export)'                              , 'ncdu'],
-"       \ 'u' : ['<plug>(wiki-list-uniq)'                              , 'ncdu'],
-"       \ 'U' : ['<plug>(wiki-list-uniq-local)'                              , 'ncdu'],
-"       \ }
->>>>>>> 86366002e29ccac58bf99ac24ae16cbf77d2c093
 
 " Global
 " <Plug>VimwikiIndex
